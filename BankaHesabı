@@ -1,0 +1,47 @@
+defkullanıadı = "HasanKacar"
+defşifre = "HKPAU"
+defbakiye = 1000
+
+while(True):
+
+    isim = input("Kullanıcı Adını Giriniz:")
+    parola = input("Şifrenizi Giriniz:")
+
+
+    if((isim == defkullanıadı) and (parola == defşifre)):
+
+
+        print("1.Para Yatırma")
+        print("2.Para Çekme")
+        print("3.Bakiye Görüntüleme")
+
+
+        seçim = int(input())
+
+        if(seçim == 1):
+
+            print("Yatırmak İstediğiniz Miktarı Giriniz:")
+            miktar = int(input())
+            print("Yeni bakiyeniz:",(miktar+defbakiye))
+            defbakiye = miktar+defbakiye
+
+            continue
+
+        elif(seçim == 2):
+
+            print("Çekmek İstediğiniz Miktarı Giriniz:")
+            maaş = int(input())
+            print("Kalan Bakiye:",(defbakiye-maaş))
+
+            defbakiye = defbakiye-maaş
+            continue
+
+        elif(seçim == 3):
+
+            print("Bakiyeniz:",defbakiye)
+            continue
+
+    else:
+        print("Kullanıcı Adı veya Şifre Hatalı")
+
+
